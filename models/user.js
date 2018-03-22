@@ -6,6 +6,6 @@ const userSchema = new Schema({
     password: String
 });
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema); // the geen indicats the collection http://mongoosejs.com/docs/api.html#utils_exports.toCollectionName
 
 module.exports = User;
