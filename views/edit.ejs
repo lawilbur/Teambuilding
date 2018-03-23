@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Show</title>
+    </head>
+    <body>
+        <h1> Update Post</h1>
+        <form action='/<%=post.id %>?_method=PUT' method='POST'>
+            <label for="name">Name: </label>
+            <input type="text" name="name" value="<%=post.name%>"><br/>
+
+            <label for="size">Size: </label>
+            <input type="text" name="size" value="<%=post.size%>"><br/>
+
+            <label for="time">Time: </label>
+            <input type="text" name="time" value="<%=post.time%>"><br/>
+
+            <input type="text" name="tags" hidden=true value="<%=post.tags%>">
+
+            <label for="needed">Items Needed: </label>
+            <input type="text" name="needed" value="<%=post.needed%>"><br/>
+
+            <label for="game">Game Description: </label><br/>
+            <textarea type="textarea" name="game" value="<%=post.game%>"><%=post.game%></textarea><br/>
+
+
+            <input type="submit" name="submit" value="Submit" class="edit-button">
+        </from>
+    </body>
+</html>
