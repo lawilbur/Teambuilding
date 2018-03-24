@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1> Update Post</h1>
-        <form action='/<%=post.id %>?_method=PUT' method='POST'>
+        <form action='/view/<%=post.id %>?_method=PUT' method='POST'>
             <label for="name">Name: </label>
             <input type="text" name="name" value="<%=post.name%>"><br/>
 
@@ -16,7 +16,8 @@
             <label for="time">Time: </label>
             <input type="text" name="time" value="<%=post.time%>"><br/>
 
-            <input type="text" name="tags" hidden=true value="<%=post.tags%>">
+            <label for="tags">Tags: </label>
+            <input type="text" name="tags" value="<%=post.tags%>"><br/>
 
             <label for="needed">Items Needed: </label>
             <input type="text" name="needed" value="<%=post.needed%>"><br/>
@@ -24,8 +25,11 @@
             <label for="game">Game Description: </label><br/>
             <textarea type="textarea" name="game" value="<%=post.game%>"><%=post.game%></textarea><br/>
 
+            <input type="submit" name="submit" value="Submit"><br/>
+        </form>
 
-            <input type="submit" name="submit" value="Submit" class="edit-button">
-        </from>
+        <form action='/view/<%=post.id %>?_method=DELETE' method='POST'>
+            <input type="submit" name="submit" value="Delete Post" >
+        </form>
     </body>
 </html>

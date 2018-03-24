@@ -2,14 +2,30 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>New Post</title>
     </head>
     <body>
-        <h1>Create User</h1>
-        <form action="/users" method="POST">
-            <input type="text" name="username" placeholder="username"/>
-            <input type="password" name="password" />
-            <input type="submit" value="Create User" />
+        <h1> Create Post</h1>
+        <form action='/view' method='POST'>
+            <label for="name">Name: </label>
+            <input type="text" name="name" placeholder="Name of the game"><br/>
+
+            <label for="size">Size: </label>
+            <input type="text" name="size" placeholder="Group size"><br/>
+
+            <label for="time">Time: </label>
+            <input type="text" name="time" placeholder="Time it takes to play"><br/>
+
+            <label for="tags">Tags: </label>
+            <input type="text" name="tags" placeholder="Relavent tags"><br/>
+
+            <label for="needed">Items Needed: </label>
+            <input type="text" name="needed" placeholder="Items needed to play"><br/>
+
+            <label for="game">Game Description: </label><br/>
+            <textarea type="textarea" name="game" placeholder="Game description and rules"></textarea><br/>
+
+            <input type="submit" name="submit" value="Create Post"><br/>
         </form>
     </body>
 </html>
