@@ -1,26 +1,31 @@
 const express = require('express');
 const router = express.Router();
 const Posts = require('../models/posts.js');
+const session = require('express-session');
 
 //index
 router.get('/index' , (req , res)=>{
     Posts.find({}, (err, foundPosts)=>{
         res.render('item_index.ejs', {
-            posts: foundPosts
+            posts: foundPosts,
+            currentUser: req.session.currentuser
         })
     })
 
 })
 //New
 router.get('/new' , (req , res)=>{
-    res.render('new.ejs');
+    res.render('new.ejs', {
+        currentUser: req.session.currentuser
+    });
 })
 
 //Show
 router.get('/index/:id', (req , res)=>{
     Posts.findById( req.params.id , (err , postContent)=>{
         res.render('show.ejs' , {
-            post: postContent
+            post: postContent,
+            currentUser: req.session.currentuser
         })
     })
 
@@ -32,7 +37,8 @@ router.get('/index/:id/edit', (req , res)=>{
         let objects = postContent.needed.join(', ');
         postContent.needed = objects;
         res.render('edit.ejs' , {
-            post: postContent
+            post: postContent,
+            currentUser: req.session.currentuser
         })
     })
 

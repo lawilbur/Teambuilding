@@ -3,21 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Index</title>
+        <% include partials/header.ejs %>
     </head>
     <body>
-        <nav>
-            <div>
-                <a href='#'>Home</a>
-                <a href='/view/index'>Index</a>
-                <h1>Team Building</h1>
-                <a href="/users/new"><button type="button">Register</button></a>
-                <a href="/sessions/new"><button type="button">Login</button></a>
-                <% if(currentUser) { %>
-                <form action="/sessions?_method=DELETE" method="POST">
-                  <input type="submit" value="Logout"/>
-                </form>
-                <% } %>
-            </div>
+        <nav class='container'>
+            <% include partials/nav.ejs %>
         </nav>
 
     </body>

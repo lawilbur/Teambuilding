@@ -1,0 +1,16 @@
+body{
+    background-color: #EDEAE5;
+}
+
+.nav{
+    color: #9FEDD7;
+    background-color: #474853;
+    text-align: center;
+    align-items: center;
+
+}
+
+button{
+    background-color: #86B3D1;
+    border-radius: 7px;
+}

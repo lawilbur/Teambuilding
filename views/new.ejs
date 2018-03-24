@@ -3,8 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>New Post</title>
+        <% include partials/header.ejs %>
     </head>
     <body>
+        <nav class='container'>
+            <% include partials/nav.ejs %>
+        </nav>
         <h1> Create Post</h1>
         <form action='/view' method='POST'>
             <label for="name">Name: </label>

@@ -16,7 +16,7 @@ app.use(session({
 }));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended:false}));
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 //Controllers
 const viewerController = require('./controllers/viewers.js');

@@ -2,9 +2,13 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Show</title>
+        <title>Edit</title>
+        <% include partials/header.ejs %>
     </head>
     <body>
+        <nav class='container'>
+            <% include partials/nav.ejs %>
+        </nav>
         <h1> Update Post</h1>
         <form action='/view/<%=post.id %>?_method=PUT' method='POST'>
             <label for="name">Name: </label>
