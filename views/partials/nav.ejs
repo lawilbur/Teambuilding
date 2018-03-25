@@ -1,17 +1,13 @@
-<div class="row nav">
-  <!-- <a href="/products"><h1 id="store" class="six columns">The Mongoose Store</h1></a>
-  <span class="three columns">&nbsp;</span>
-  <a href="/products/new"><button type="button" name="button" class="new-product three columns">New Product</button></a>
-  <span class="one column">&nbsp;</span> -->
-          <a class='col' href='/'>Home</a>
-          <a class='col' href='/view/index'>Index</a>
-          <h1 class='col-6'>Team Building</h1>
-          <a class='col' href="/users/new"><button type="button">Register</button></a>
+<div class="row nav flex-nowrap">
+          <a class='col-sm' href='/'>Home</a>
+          <a class='col-sm' href='/view/index'>Index</a>
+          <h1 class='col-sm-6'>Team Building</h1>
+          <a class='col-sm' href="/users/new"><button type="button">Register</button></a>
           <% if(currentUser) { %>
-          <form class='col' action="/sessions?_method=DELETE" method="POST">
+          <form class='col-sm' action="/sessions?_method=DELETE" method="POST">
             <button type="submit">Logout</button>
           </form>
           <% } else {%>
-              <a class='col' href="/sessions/new"><button type="button">Login</button></a>
+              <a class='col-sm' href="/sessions/new"><button type="button">Login</button></a>
         <% } %>
 </div>

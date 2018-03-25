@@ -9,13 +9,44 @@
         <nav class='container'>
             <% include partials/nav.ejs %>
         </nav>
-        <h1> Index Page </h1>
-        <a href='/view/new'>Create Post</a>
-        <ul>
-        <% for( let i = 0; i< posts.length; i++) { %>
-            <li><a href='/view/index/<%=posts[i].id%>'><%=posts[i].name %></a></li>
+        <div class='gamecontainer'>
+        <h1> Name Games </h1>
+            <ul class='row'>
+                <% for( let i = 0; i< posts.length; i++) { %>
+                    <li class='col-sm-3'><a href='/view/index/<%=posts[i].id%>'><%=posts[i].name %></a></li>
 
-         <% } %>
-        </ul>
+                <% } %>
+            </ul>
+        </div>
+        <div class='gamecontainer'>
+        <h1> Git to Know You's </h1>
+            <ul class='row'>
+                <% for( let i = 0; i< posts.length; i++) { %>
+                    <li class='col-sm-3'><a href='/view/index/<%=posts[i].id%>'><%=posts[i].name %></a></li>
+
+                <% } %>
+            </ul>
+        </div>
+        <div class='gamecontainer'>
+        <h1> Initiatives </h1>
+            <ul class='row'>
+                <% for( let i = 0; i< posts.length; i++) { %>
+                    <li class='col-sm-3'><a href='/view/index/<%=posts[i].id%>'><%=posts[i].name %></a></li>
+
+                <% } %>
+            </ul>
+        </div>
+        <div class='gamecontainer'>
+        <h1> Trust exercises </h1>
+            <ul class='row'>
+                <% for( let i = 0; i< posts.length; i++) { %>
+                    <li class='col-sm-3'><a href='/view/index/<%=posts[i].id%>'><%=posts[i].name %></a></li>
+
+                <% } %>
+            </ul>
+        </div>
+        <% if(currentUser){ %>
+            <a class='cPost' href='/view/new'>Create Post</a>
+        <% } %>
     </body>
 </html>

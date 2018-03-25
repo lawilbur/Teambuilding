@@ -9,11 +9,26 @@
         <nav class='container'>
             <% include ../partials/nav.ejs %>
         </nav>
-        <h1>Create User</h1>
-        <form action="/users" method="POST">
-            <input type="text" name="username" placeholder="username"/>
-            <input type="password" name="password" />
-            <input type="submit" value="Create User" />
-        </form>
+        <div class='form-box'>
+            <h1 class=''>Create User</h1>
+            <form action="/users" method="POST">
+                <div class="">
+                    <label for='username' class='col-form-label'>Username</label>
+                    <input class="" type="text" name="username" placeholder="username"/>
+                </div>
+                <div class="">
+                    <label for='password' class='col-form-label'>Password</label>
+                    <input class='' type="password" placeholder="password" name="password" />
+                </div>
+
+                <input class='btn' type="submit" value="Create User" />
+            </form>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>

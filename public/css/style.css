@@ -1,7 +1,37 @@
+/* *{
+    border: 1px solid grey;
+    margin: 2px;
+} */
 body{
-    background-color: #EDEAE5;
-}
+    background-color: #4d6d9a;
+    /* background-color: #EDEAE5; */
+    /* background-image: url('../imgs/team_table.jpg');
+    background-size: 100% 50%;
+    background-repeat: no-repeat; */
 
+
+}
+.btn{
+    margin-top: 2%;
+}
+.btn:hover{
+    background-color: #EDB5BF;
+}
+.form-box{
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+    padding: 2% 1%;
+    width: 30%;
+    border: 2px solid #EDB5BF;
+    border-radius: 10px;
+    background-color: lightgrey;
+
+}
+.card{
+    margin: 10px;
+}
 .nav{
     color: #9FEDD7;
     background-color: #474853;
@@ -9,8 +39,72 @@ body{
     align-items: center;
 
 }
-
+footer{
+    justify-content: center;
+}
 button{
     background-color: #86B3D1;
     border-radius: 7px;
 }
+
+.head{
+    background-image: url(../imgs/team_table.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 500px;
+
+}
+.mid1{
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%;
+    width: 50%;
+    color: white;
+    background-color: #86B3D1;
+
+
+}
+.mid2{
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%;
+    width: max-content;
+    color: white;
+    background-color: #86B3D1;
+
+
+}
+.cPost{
+    border-radius: 5px;
+    padding: 10px;
+    /* border: 1px solid red; */
+    color: #5F6366;
+    background-color: azure;
+}
+.gamecontainer{
+    width: 90%;
+    margin: 2% auto;
+    border: 1px dotted #86B3D1;
+    /* justify-content: center; */
+    text-align: center;
+
+
+}
+a{
+    color: white;
+}
+
+a:hover{
+    color: #EDB5BF;
+    text-decoration: none;
+
+}
+button:hover{
+    background-color: #EDB5BF;
+}
+
+ /*.mid{
+     background-color: #EDEAE5;
+     margin-top:10%;
+     text-align: center;
+ } */
