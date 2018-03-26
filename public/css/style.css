@@ -80,14 +80,20 @@ button{
     /* border: 1px solid red; */
     color: #5F6366;
     background-color: azure;
+
+}
+.cPostBox{
+    margin: 2% auto;
+    text-align: center;
 }
 .gamecontainer{
-    width: 90%;
+    width: 70%;
     margin: 2% auto;
     border: 1px dotted #86B3D1;
-    /* justify-content: center; */
     text-align: center;
-
+}
+.showlink{
+    padding: 5px;
 
 }
 a{
@@ -101,6 +107,35 @@ a:hover{
 }
 button:hover{
     background-color: #EDB5BF;
+}
+.postcontainer{
+    border: 1px solid lightgrey;
+    margin: 5px;
+    border-radius: 10px;
+}
+.topContainer{
+    /* border: 1px solid lightgrey; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5px;
+    /* align-items: center; */
+}
+.postcontainerneed{
+    border: 1px solid lightgrey;
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+}
+.postcontainerbottom{
+    border: 1px solid lightgrey;
+    margin: 10px 5px;
+    border-radius: 10px;
+    padding: 1%;
+    line-height: normal;
+}
+.editbtn{
+    margin: 10px 45%;
 }
 
  /*.mid{

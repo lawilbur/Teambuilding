@@ -9,14 +9,39 @@
         <nav class='container'>
             <% include partials/nav.ejs %>
         </nav>
-        <h1><%=post.name %></h1>
-        <h3><%=post.size %></h3>
-        <h3><%=post.time %></h3>
-        <h3><%=post.tags %></h3>
-        <h3><%=post.needed %></h3>
-        <p><%=post.game %></p>
+        <div class='container'>
+            <div class='topContainer row'>
+                <div class='postcontainer col-sm-9'>
+                    <h1><%=post.name %></h1>
+                </div>
+                <div class='postcontainer col-sm-3'>
+                    Suitable for:
+                    <h3><%=post.size %> people</h3>
+                </div>
+                <div class='postcontainer col-sm-3'>
+                    Game lasts for:
+                    <h3><%=post.time %> minutes</h3>
+                </div>
+                <div class='postcontainer col-sm-5'>
+                    Tags:
+                    <h3><%=post.tags[0] + ', ' + post.tags[1] %></h3>
+                </div>
+            </div>
+
+                <div class='postcontainerneed row justify-content-start'>
+                    <p class='col-sm-12'>What you need to play:</p>
+                    <% for(let i=0; i< post.needed.length; i++){ %>
+                        <h3 class='col'><%=post.needed[i] %></h3>
+                    <% } %>
+
+                </div>
+                <div class='postcontainerbottom'>
+                    <p><%=post.game %></p>
+                </div>
+            </div>
+        </div>
         <% if(currentUser) { %>
-        <a href='/view/index/<%=post.id %>/edit %>'>EDIT</a>
+        <a class='btn btn-dark editbtn' href='/view/index/<%=post.id %>/edit %>'>EDIT</a>
         <% } %>
         <% include partials/footer.ejs %>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
